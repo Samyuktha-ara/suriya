@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Globe, Camera, Video } from 'lucide-react'
 import { DEALER, NAV_LINKS, SERVICE_AREAS } from '../../data/dealer'
+import logo from '../../assets/logo.webp'
 import './Footer.css'
 
 export default function Footer() {
@@ -10,11 +11,14 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <div className="footer__logo">
-            <img src="/favicon.svg" alt="Suriya NEXA Thanjavur logo" width="46" height="46" />
-            <div>
-              <strong>Suriya NEXA</strong>
-              <small>Authorized Suzuki NEXA Dealer · Thanjavur</small>
-            </div>
+            <img
+              className="footer__logo-img"
+              src={logo}
+              alt="Suriya NEXA Thanjavur — NEXA Create. Inspire."
+              width="640"
+              height="280"
+            />
+            <small>Authorized Suzuki NEXA Dealer · Thanjavur</small>
           </div>
           <p className="footer__about">
             Suriya NEXA is the trusted Suzuki NEXA showroom in Thanjavur for the Fronx, Baleno,

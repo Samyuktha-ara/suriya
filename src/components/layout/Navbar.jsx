@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
 import Button from '../ui/Button'
 import { DEALER, NAV_LINKS } from '../../data/dealer'
+import logo from '../../assets/logo.webp'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -35,13 +36,13 @@ export default function Navbar() {
     >
       <nav className="nav__inner container" aria-label="Primary">
         <a href="#top" className="nav__brand" aria-label="Suriya NEXA Thanjavur — home">
-          <span className="nav__logo" aria-hidden="true">
-            <img src="/favicon.svg" alt="" width="40" height="40" />
-          </span>
-          <span className="nav__brand-text">
-            <strong>Suriya NEXA</strong>
-            <small>Thanjavur</small>
-          </span>
+          <img
+            className="nav__logo-img"
+            src={logo}
+            alt="Suriya NEXA Thanjavur — NEXA Create. Inspire."
+            width="640"
+            height="280"
+          />
         </a>
 
         <ul className="nav__links">

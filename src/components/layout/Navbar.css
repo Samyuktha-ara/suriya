@@ -46,26 +46,19 @@
   gap: 0.65rem;
 }
 
-.nav__logo img {
+/* Silver-on-black wordmark: sits on a dark tile so it reads on both the
+   dark hero (transparent nav) and the white scrolled nav. */
+.nav__logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
   border-radius: 10px;
+  background: #07070c;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-.nav__brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-.nav__brand-text strong {
-  font-family: var(--font-display);
-  font-size: 1.12rem;
-  letter-spacing: 0.02em;
-  color: #fff;
-}
-.nav__brand-text small {
-  font-size: 0.68rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--gold);
+.nav--scrolled .nav__logo-img {
+  border-color: var(--line);
 }
 
 .nav__links {
