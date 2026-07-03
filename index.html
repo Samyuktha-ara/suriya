@@ -80,10 +80,10 @@
     <meta name="twitter:image" content="https://samyuktha-ara.github.io/suriya/og-suzuki-fronx-nexa-thanjavur.webp" />
     <meta name="twitter:image:alt" content="Suzuki Fronx at Suriya NEXA Thanjavur" />
 
-    <!-- Icons & Manifest (relative so they resolve under the Vite base path) -->
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="apple-touch-icon" href="./favicon.svg" />
-    <link rel="manifest" href="./site.webmanifest" />
+    <!-- Icons & Manifest (%BASE_URL% resolves to the Vite base in dev & build) -->
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%favicon.svg" />
+    <link rel="manifest" href="%BASE_URL%site.webmanifest" />
 
     <!-- Structured Data: Organization / AutoDealer / LocalBusiness -->
     <script type="application/ld+json">
