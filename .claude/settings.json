@@ -5,7 +5,11 @@
       "Bash(node -e \"const l=require\\('lucide-react'\\); const keys=Object.keys\\(l\\); ['Facebook','Instagram','Youtube','Share2','Send','AtSign','Globe','ThumbsUp','Video','Camera'].forEach\\(k=>console.log\\(k, k in l\\)\\)\")",
       "Bash(node -e ' *)",
       "Bash(pkill -f \"vite preview\")",
-      "Bash(node -e \"const l=require\\('lucide-react'\\);['Award','Car','ShieldCheck','Wallet','RefreshCw','ArrowRight','MapPin','Phone'].forEach\\(k=>console.log\\(k, k in l\\)\\)\")"
+      "Bash(node -e \"const l=require\\('lucide-react'\\);['Award','Car','ShieldCheck','Wallet','RefreshCw','ArrowRight','MapPin','Phone'].forEach\\(k=>console.log\\(k, k in l\\)\\)\")",
+      "Bash(gh api *)",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ]
   }
 }

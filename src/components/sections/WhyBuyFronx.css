@@ -59,6 +59,12 @@
   justify-content: center;
   margin-top: 3rem;
 }
+/* Allow this longer CTA label to wrap instead of overflowing on small screens */
+.timeline__cta .btn {
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}
 
 @media (max-width: 940px) {
   .timeline {

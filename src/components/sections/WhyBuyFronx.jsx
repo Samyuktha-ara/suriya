@@ -41,7 +41,7 @@ export default function WhyBuyFronx() {
 
         <div className="timeline__cta">
           <Button href="#contact" variant="primary" size="lg" icon={CalendarCheck}>
-            Experience the Fronx — Book a Test Drive
+            Book a Fronx Test Drive
           </Button>
         </div>
       </div>
