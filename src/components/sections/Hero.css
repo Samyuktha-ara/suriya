@@ -311,7 +311,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    min-height: 100svh;
+    min-height: 90svh;
   }
   /* Portrait banner: copy sits at the TOP over the dark sky, the cars fill
      the lower half unobstructed. Darken the top band for text legibility. */
@@ -385,16 +385,14 @@
     margin-top: 0.7rem;
     font-size: 0.78rem;
   }
-  /* Compact feature strip */
-  .hero__strip {
-    padding-block: 1rem;
-  }
+  /* Compact feature strip, pulled up to close the gap below it */
+
   .hero__strip-inner {
     gap: 1rem;
   }
   .hero__features {
     gap: 0.7rem 1.1rem;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
   }
   .hero__feature {
