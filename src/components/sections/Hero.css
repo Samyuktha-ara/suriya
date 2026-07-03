@@ -311,7 +311,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    min-height: 90svh;
+    min-height: 86svh;
   }
   /* Portrait banner: copy sits at the TOP over the dark sky, the cars fill
      the lower half unobstructed. Darken the top band for text legibility. */
