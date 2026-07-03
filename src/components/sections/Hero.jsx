@@ -12,6 +12,7 @@ import {
 } from 'lucide-react'
 import { DEALER } from '../../data/dealer'
 import heroImg from '../../assets/hero.webp'
+import heroMobileImg from '../../assets/mobile-hero.webp'
 import './Hero.css'
 
 const FEATURES = [
@@ -27,15 +28,18 @@ export default function Hero() {
     <section className="hero" id="top" aria-label="Suriya NEXA Thanjavur — Suzuki Fronx showroom">
       {/* Full-bleed cinematic banner (LCP element) */}
       <div className="hero__bg">
-        <img
-          src={heroImg}
-          className="hero__bg-img"
-          alt="Suzuki Fronx, Baleno and Grand Vitara displayed at the Suriya NEXA showroom in Thanjavur"
-          fetchPriority="high"
-          decoding="async"
-          width="1730"
-          height="920"
-        />
+        <picture>
+          <source media="(max-width: 640px)" srcSet={heroMobileImg} width="941" height="1672" />
+          <img
+            src={heroImg}
+            className="hero__bg-img"
+            alt="Suzuki Fronx, Baleno and Grand Vitara displayed at the Suriya NEXA showroom in Thanjavur"
+            fetchPriority="high"
+            decoding="async"
+            width="1730"
+            height="920"
+          />
+        </picture>
         <div className="hero__scrim" />
       </div>
 
@@ -59,8 +63,10 @@ export default function Hero() {
 
           <p className="hero__subtitle hero__reveal" style={{ '--d': '0.3s' }}>
             Discover the NEXA range. Driven by excellence.
-            <br />
-            Book your Suzuki Fronx test drive in Thanjavur today.
+            <span className="hero__subtitle-extra">
+              {' '}
+              Book your Suzuki Fronx test drive in Thanjavur today.
+            </span>
           </p>
 
           {/* Conversion CTAs */}
