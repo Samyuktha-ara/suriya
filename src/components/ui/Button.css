@@ -1,0 +1,83 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease,
+    border-color 0.25s ease, color 0.25s ease;
+  will-change: transform;
+  isolation: isolate;
+}
+
+.btn__icon {
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.btn--sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+}
+.btn--md {
+  padding: 0.8rem 1.6rem;
+  font-size: 0.95rem;
+}
+.btn--lg {
+  padding: 1rem 2rem;
+  font-size: 1.02rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------------------------
+   Unified CTA style — every solid CTA (primary / call / whatsapp)
+   shares the same subtle ink treatment for a consistent,
+   premium look across the whole site.
+   ------------------------------------------------------------- */
+.btn--primary,
+.btn--call,
+.btn--whatsapp {
+  color: #ffffff;
+  background: #141628;
+  box-shadow: 0 8px 22px rgba(20, 22, 40, 0.18);
+  font-weight: 600;
+}
+.btn--primary:hover,
+.btn--call:hover,
+.btn--whatsapp:hover {
+  background: #23263f;
+  box-shadow: 0 14px 32px rgba(20, 22, 40, 0.26);
+}
+
+/* Secondary — bordered, same ink palette */
+.btn--outline {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+}
+.btn--outline:hover {
+  border-color: #141628;
+  background: rgba(20, 22, 40, 0.04);
+  color: var(--text);
+}
+
+/* Ghost — text only */
+.btn--ghost {
+  color: var(--text-soft);
+  padding-inline: 0.6rem;
+}
+.btn--ghost:hover {
+  color: var(--text);
+  transform: none;
+}

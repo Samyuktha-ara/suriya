@@ -1,0 +1,129 @@
+/* Vertical rail (desktop / tablet) */
+.float-rail {
+  position: fixed;
+  right: clamp(0.8rem, 2vw, 1.6rem);
+  bottom: clamp(1.2rem, 4vw, 2.2rem);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.float-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.float-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Unified subtle ink CTAs */
+.float-btn--call,
+.float-btn--wa,
+.float-btn--td {
+  background: #141628;
+  color: #ffffff;
+}
+.float-btn--call:hover,
+.float-btn--wa:hover,
+.float-btn--td:hover {
+  background: #23263f;
+}
+.float-btn--top {
+  background: #ffffff;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+}
+
+/* Animated ping ring on the WhatsApp button to draw attention */
+.float-btn--wa::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(20, 22, 40, 0.5);
+  animation: floatPing 2.4s ease-out infinite;
+}
+@keyframes floatPing {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+.float-btn__tip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  padding: 0.35rem 0.7rem;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.float-btn:hover .float-btn__tip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Mobile bottom bar */
+.float-bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 95;
+  display: none;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 24px rgba(20, 22, 40, 0.1);
+  padding: 0.5rem 0.6rem calc(0.5rem + env(safe-area-inset-bottom));
+}
+
+.float-bar__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem 0.3rem;
+  margin: 0.15rem;
+  border-radius: 14px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #fff;
+}
+.float-bar__item--call,
+.float-bar__item--wa,
+.float-bar__item--td {
+  background: #141628;
+  color: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .float-rail {
+    display: none;
+  }
+  .float-bar {
+    display: flex;
+  }
+}

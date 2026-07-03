@@ -1,0 +1,82 @@
+.finance {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.finance__intro {
+  max-width: 460px;
+}
+.finance__title {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  margin: 1rem 0 1.2rem;
+}
+.finance__text {
+  color: var(--text-soft);
+  line-height: 1.75;
+  margin-bottom: 1.8rem;
+}
+.finance__text strong {
+  color: var(--text);
+}
+.finance__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.finance__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.1rem;
+}
+.finance__card {
+  padding: 1.6rem 1.4rem;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.finance__card:hover {
+  transform: translateY(-6px);
+  border-color: var(--line-strong);
+}
+.finance__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  color: var(--gold);
+  background: rgba(231, 185, 106, 0.1);
+  border: 1px solid rgba(231, 185, 106, 0.3);
+}
+.finance__card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.finance__card-text {
+  font-size: 0.86rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* Let the 5th card span full width for a balanced 2x3 grid */
+.finance__card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 860px) {
+  .finance {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 460px) {
+  .finance__grid {
+    grid-template-columns: 1fr;
+  }
+  .finance__cta .btn {
+    flex: 1 1 100%;
+  }
+}

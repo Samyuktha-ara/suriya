@@ -1,0 +1,230 @@
+/* =========================================================
+   Suriya NEXA Thanjavur — Global styles & design tokens
+   ========================================================= */
+
+:root {
+  /* Brand palette — premium automotive light theme */
+  --bg: #ffffff;
+  --bg-2: #f5f6fb;
+  --surface: #ffffff;
+  --surface-2: #f7f8fd;
+  --line: rgba(16, 18, 40, 0.1);
+  --line-strong: rgba(16, 18, 40, 0.18);
+
+  --text: #0f1120;        /* near-black headings */
+  --text-soft: #4b5064;   /* body */
+  --text-mute: #8388a0;   /* captions */
+
+  --brand: #6d28d9;       /* deep NEXA violet — reads on white */
+  --brand-2: #0891b2;     /* deep cyan — for text/icon accents */
+  --gold: #b07d2b;        /* luxury gold ink — reads on white */
+  --accent-grad: linear-gradient(120deg, #7b5cff 0%, #00d0ff 100%);
+  --text-grad: linear-gradient(120deg, #6d28d9 0%, #0891b2 100%);
+  --gold-grad: linear-gradient(120deg, #d8ab5a 0%, #f4d9a6 100%);
+
+  --whatsapp: #1ebe5a;
+
+  --radius: 18px;
+  --radius-lg: 26px;
+  --radius-sm: 12px;
+
+  --shadow-sm: 0 4px 18px rgba(23, 28, 66, 0.08);
+  --shadow-md: 0 20px 50px rgba(23, 28, 66, 0.12);
+  --shadow-glow: 0 10px 30px rgba(123, 92, 255, 0.22);
+
+  --container: 1200px;
+  --nav-h: 74px;
+
+  --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* -------- Custom scrollbar -------- */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #7b5cff var(--bg-2);
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7b5cff, #00d0ff);
+  border-radius: 100px;
+  border: 3px solid var(--bg-2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00d0ff, #7b5cff);
+}
+::-webkit-scrollbar-corner {
+  background: var(--bg-2);
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-2);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(1.1rem, 4vw, 2.5rem);
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+.section--tint {
+  background:
+    radial-gradient(1200px 600px at 100% -10%, rgba(123, 92, 255, 0.07), transparent 60%),
+    var(--bg-2);
+}
+
+/* Gradient text utility (deeper gradient for contrast on white) */
+.grad-text {
+  background: var(--text-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-text {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Eyebrow / kicker label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand);
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(109, 40, 217, 0.2);
+  border-radius: 100px;
+  background: rgba(109, 40, 217, 0.07);
+}
+
+/* Glass card base — soft elevated surface on light */
+.glass {
+  background: linear-gradient(180deg, #ffffff, #fbfcff);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Accessible visually-hidden text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Reduced motion: respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

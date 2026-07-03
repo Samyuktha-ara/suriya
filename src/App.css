@@ -1,0 +1,22 @@
+/* App-level utilities */
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0 0 12px 12px;
+  background: var(--accent-grad);
+  color: #0a0a12;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Suspense placeholder — reserves space to avoid layout shift */
+.section-fallback {
+  min-height: 60vh;
+}

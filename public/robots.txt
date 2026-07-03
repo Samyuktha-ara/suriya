@@ -1,0 +1,7 @@
+# robots.txt — Suriya NEXA Thanjavur
+User-agent: *
+Allow: /
+Disallow:
+
+# Sitemap
+Sitemap: https://www.suriyanexathanjavur.in/sitemap.xml

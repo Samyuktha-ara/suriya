@@ -1,0 +1,382 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  padding-top: var(--nav-h);
+}
+
+/* Entrance reveal — content is visible by default; the animation only
+   adds a subtle fade-up, so text can never end up stuck hidden. */
+.hero__reveal {
+  animation: heroReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__reveal {
+    animation: none;
+  }
+}
+
+/* ---- Background image ---- */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+}
+
+/* Subtle cinematic scrim — the banner is already dark; darken left + bottom */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(6, 8, 16, 0.72) 0%, rgba(6, 8, 16, 0.42) 32%, rgba(6, 8, 16, 0.05) 55%, transparent 75%),
+    linear-gradient(180deg, rgba(6, 8, 16, 0.5) 0%, transparent 22%, transparent 62%, rgba(6, 8, 16, 0.82) 100%);
+}
+
+/* ---- Brand tag above headline ---- */
+.hero__tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(0.74rem, 1.4vw, 0.9rem);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.4rem;
+}
+.hero__tag-sep {
+  color: var(--gold);
+  margin-inline: 0.3em;
+  font-weight: 300;
+}
+.hero__dot {
+  color: var(--gold);
+}
+.hero__line--gold .hero__dot {
+  color: inherit;
+}
+
+/* Hero spans full width so the copy hugs the left edge (like the banner),
+   instead of being capped at the 1200px container. */
+.hero__center.container,
+.hero__strip .hero__strip-inner.container {
+  max-width: 100%;
+  padding-inline: clamp(1.5rem, 4.5vw, 4rem);
+}
+
+/* ---- Center content ---- */
+.hero__center {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(2rem, 6vh, 5rem);
+}
+.hero__content {
+  max-width: 540px;
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+.hero__line {
+  display: block;
+}
+.hero__line--gold {
+  background: linear-gradient(100deg, #e7c586 0%, #d3a256 60%, #c8923f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__subtitle {
+  margin-top: 1.6rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.86rem, 1.6vw, 1.05rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+/* ---- Conversion CTAs ---- */
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.95rem 1.6rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.98rem;
+  border-radius: 100px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease,
+    border-color 0.25s ease;
+}
+.hero__btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Primary — gold gradient, with an attention pulse to drive contact */
+.hero__btn--primary {
+  color: #201704;
+  background: linear-gradient(120deg, #e7c586, #d3a256);
+  box-shadow: 0 10px 30px rgba(211, 162, 86, 0.4);
+  animation: heroPulse 2.6s ease-in-out infinite;
+}
+.hero__btn--primary:hover {
+  box-shadow: 0 16px 40px rgba(211, 162, 86, 0.55);
+}
+@keyframes heroPulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(211, 162, 86, 0.4), 0 0 0 0 rgba(231, 197, 134, 0.5);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(211, 162, 86, 0.4), 0 0 0 12px rgba(231, 197, 134, 0);
+  }
+}
+
+/* Call — solid white glass */
+.hero__btn--call {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+}
+.hero__btn--call:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #fff;
+}
+
+/* WhatsApp — compact icon */
+.hero__btn--wa {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+}
+.hero__btn--wa:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__btn--primary {
+    animation: none;
+  }
+}
+
+/* ---- Trust line ---- */
+.hero__trust {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero__trust-stars {
+  display: inline-flex;
+  gap: 0.1rem;
+  color: var(--gold);
+}
+.hero__trust strong {
+  color: #fff;
+}
+
+/* ---- Bottom strip ---- */
+.hero__strip {
+  position: relative;
+  padding-block: clamp(1.2rem, 3vw, 2rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(0deg, rgba(6, 8, 16, 0.55), transparent);
+}
+.hero__strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.hero__features {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2.2rem);
+  flex-wrap: wrap;
+}
+.hero__feature {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+}
+.hero__feature:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: calc(clamp(1rem, 2.4vw, 2.2rem) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.hero__feature-icon {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.hero__feature-text {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero__contact {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 2.5vw, 2.4rem);
+}
+.hero__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+.hero__contact-item:hover {
+  color: var(--gold);
+}
+.hero__contact-icon {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1040px) {
+  .hero__bg-img {
+    object-position: 66% center;
+  }
+  .hero__contact {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 100svh;
+  }
+  /* Show the cars up top, anchor the copy + CTAs to the lower half */
+  .hero__scrim {
+    background:
+      linear-gradient(180deg, rgba(6, 8, 16, 0.35) 0%, rgba(6, 8, 16, 0.15) 28%, rgba(6, 8, 16, 0.72) 62%, rgba(6, 8, 16, 0.95) 100%);
+  }
+  .hero__bg-img {
+    object-position: 60% 32%;
+  }
+  .hero__center {
+    align-items: flex-end;
+    padding-bottom: 1.4rem;
+  }
+  .hero__content {
+    max-width: 100%;
+  }
+  .hero__tag {
+    margin-bottom: 0.9rem;
+    font-size: 0.72rem;
+  }
+  .hero__subtitle {
+    margin-top: 1.1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+  }
+  /* Full-width, thumb-friendly CTAs */
+  .hero__cta {
+    margin-top: 1.5rem;
+    gap: 0.6rem;
+  }
+  .hero__btn--primary,
+  .hero__btn--call {
+    flex: 1 1 100%;
+    padding: 1.05rem 1.6rem;
+    font-size: 1.05rem;
+  }
+  .hero__btn--wa {
+    display: none; /* WhatsApp already in the sticky mobile bar */
+  }
+  .hero__trust {
+    margin-top: 1.1rem;
+    font-size: 0.82rem;
+  }
+  /* Compact feature strip */
+  .hero__strip {
+    padding-block: 1rem;
+  }
+  .hero__strip-inner {
+    gap: 1rem;
+  }
+  .hero__features {
+    gap: 0.7rem 1.1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .hero__feature {
+    gap: 0.45rem;
+  }
+  .hero__feature-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .hero__feature-text {
+    font-size: 0.64rem;
+    letter-spacing: 0.04em;
+  }
+  .hero__feature:not(:last-child)::after {
+    display: none;
+  }
+  .hero__contact {
+    display: none; /* Call + Book already prominent above */
+  }
+}
