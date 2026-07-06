@@ -23,8 +23,8 @@ export default function Footer() {
           <p className="footer__about">
             I'm Suriya Boopathy — a Senior Relationship Manager at NEXA Thanjavur with 2 years of
             experience and 235+ happy families delivered. Book your Baleno, Fronx, Grand Vitara,
-            Jimny, Invicto, XL6 or Ignis directly with me for doorstep test drives, ₹30,000 total
-            July benefit and PNB finance at 7.75%.
+            Jimny, Invicto or XL6 directly with me for doorstep test drives, ₹30,000 total July
+            benefit and PNB finance at 7.75%.
           </p>
           <div className="footer__social" aria-label="Social media">
             <a href={DEALER.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">

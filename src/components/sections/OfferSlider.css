@@ -1,14 +1,6 @@
 /* =========================================================
-   Offer Slider — full-bleed, cinematic, cash-money luxe.
-   Structure:
-     .offer-slider-section        (full width, dark bed)
-       .offer-slider__ambient     (drifting orbs + grid)
-       .container > .head         (eyebrow + title + subtitle)
-       .offer-slider              (full-bleed carousel body)
-         .viewport > .slide       (split layout: stat | detail)
-         .counter                 (magazine-style 01 / 05)
-         .controls > nav + dots
-         .progress                (rAF-driven fill)
+   Offer Slider — full-bleed, cinematic, dark-luxe palette.
+   Midnight bed, drifting orbs, gold hero type, gradient rim.
    ========================================================= */
 
 .offer-slider-section {
@@ -73,7 +65,7 @@
   50% { transform: translate(-46%, -54%) scale(1.1); }
 }
 
-/* Subtle grid lines for texture — barely there */
+/* Subtle grid lines for texture */
 .offer-slider__grid-lines {
   position: absolute;
   inset: 0;
@@ -141,7 +133,7 @@
   overflow: hidden;
   isolation: isolate;
 }
-/* Gradient rim — masked ring */
+/* Gradient rim */
 .offer-slider::before {
   content: '';
   position: absolute;
@@ -171,7 +163,7 @@
   50% { background-position: 100% 50%; }
 }
 
-/* Corner spotlight that follows the accent */
+/* Corner spotlight */
 .offer-slider::after {
   content: '';
   position: absolute;
@@ -215,6 +207,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  padding-right: clamp(0px, 6vw, 90px);
 }
 .offer-slider__tag {
   display: inline-block;
@@ -347,7 +340,7 @@
   gap: 0.7rem;
   margin-top: 0.5rem;
 }
-/* Boost the shared buttons' ink so they read on the dark card */
+/* Boost shared button shadow on dark */
 .offer-slider__cta .btn--primary,
 .offer-slider__cta .btn--whatsapp,
 .offer-slider__cta .btn--call {
@@ -367,11 +360,6 @@
   font-weight: 700;
   color: rgba(228, 228, 240, 0.72);
   pointer-events: none;
-}
-/* Reserve space on the stat so the tag pill never collides
-   with the absolute-positioned counter. */
-.offer-slider__stat {
-  padding-right: clamp(0px, 6vw, 90px);
 }
 .offer-slider__counter-current {
   font-size: 1.5rem;

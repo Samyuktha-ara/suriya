@@ -82,7 +82,7 @@ export const FAQS = [
   },
   {
     q: 'What other NEXA cars are available besides the Fronx?',
-    a: 'Along with the Fronx, our Thanjavur showroom offers the full NEXA range — Baleno, Grand Vitara, Jimny, Invicto, XL6 and Ignis — all available for test drives and immediate enquiry.',
+    a: 'Along with the Fronx, our Thanjavur showroom offers the full NEXA range — Baleno, Grand Vitara, Jimny, Invicto and XL6 — all available for test drives and immediate enquiry.',
   },
   {
     q: 'Does the Fronx have connected car technology?',

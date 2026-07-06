@@ -12,7 +12,7 @@ export const WHY_CHOOSE = [
   {
     icon: 'Car',
     title: 'Baleno Specialist',
-    text: 'Baleno is my top-moving model — plus the full NEXA range: Fronx, Grand Vitara, Jimny, Invicto, XL6 & Ignis, ready for a test drive.',
+    text: 'Baleno is my top-moving model — plus the full NEXA range: Fronx, Grand Vitara, Jimny, Invicto & XL6, ready for a test drive.',
   },
   {
     icon: 'Landmark',

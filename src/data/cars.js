@@ -98,15 +98,6 @@ export const NEXA_MODELS = [
       'Captain seats, commanding stance and Smart Hybrid efficiency — the ideal premium family MPV.',
     tags: ['Captain Seats', 'Smart Hybrid', 'Ventilated Seats'],
   },
-  {
-    name: 'Ignis',
-    art: 'ignis',
-    priceFrom: '₹5.84 Lakh*',
-    body: 'Urban Compact SUV',
-    description:
-      'Bold, compact and city-smart. A fun, fuel-efficient urban SUV that fits Thanjavur streets perfectly.',
-    tags: ['Compact SUV', 'Up to 20.89 km/l', 'AGS Auto'],
-  },
 ]
 
 // "Why Buy Fronx" — feature timeline.

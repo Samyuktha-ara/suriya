@@ -10,7 +10,6 @@ import grandVitaraImg from '../../assets/Grand Vitara.webp'
 import jimnyImg from '../../assets/Jimny.webp'
 import invictoImg from '../../assets/invicto.webp'
 import xl6Img from '../../assets/XL6.webp'
-import ignisImg from '../../assets/ignis.webp'
 import './OtherCars.css'
 
 // Real photos per model; models without a photo fall back to SVG art.
@@ -20,7 +19,6 @@ const CAR_IMAGES = {
   Jimny: jimnyImg,
   Invicto: invictoImg,
   XL6: xl6Img,
-  Ignis: ignisImg,
 }
 
 export default function OtherCars() {

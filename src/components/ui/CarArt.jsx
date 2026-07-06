@@ -14,7 +14,6 @@ const THEMES = {
   jimny: { a: '#3ddc84', b: '#00d0ff', body: 'offroad' },
   invicto: { a: '#b07bff', b: '#7b5cff', body: 'mpv' },
   xl6: { a: '#ff6b9d', b: '#7b5cff', body: 'mpv' },
-  ignis: { a: '#ffd23d', b: '#ff8a3d', body: 'hatch' },
 }
 
 /* Body silhouette paths on a 600×260 canvas (baseline y≈210). */
