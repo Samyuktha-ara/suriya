@@ -20,37 +20,40 @@
   z-index: 0;
   pointer-events: none;
 }
+/* Radial gradients on a fixed element are far cheaper than a blur filter,
+   so the orbs use a big radial-gradient with a soft edge instead of `filter: blur()`.
+   The `filter` prop was the single biggest paint cost of this section. */
 .offer-slider__orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.5;
+  opacity: 0.55;
   will-change: transform;
+  transform: translateZ(0);
 }
 .offer-slider__orb--1 {
-  width: 560px;
-  height: 560px;
+  width: 520px;
+  height: 520px;
   top: -160px;
-  left: -120px;
-  background: radial-gradient(circle at 30% 30%, #7b5cff, transparent 70%);
-  animation: orb-drift-a 22s ease-in-out infinite;
+  left: -140px;
+  background: radial-gradient(circle at 40% 40%, rgba(123, 92, 255, 0.55), transparent 65%);
+  animation: orb-drift-a 30s ease-in-out infinite;
 }
 .offer-slider__orb--2 {
-  width: 620px;
-  height: 620px;
+  width: 580px;
+  height: 580px;
   bottom: -200px;
-  right: -160px;
-  background: radial-gradient(circle at 60% 60%, #d8ab5a, transparent 70%);
-  animation: orb-drift-b 26s ease-in-out infinite;
+  right: -180px;
+  background: radial-gradient(circle at 55% 55%, rgba(216, 171, 90, 0.5), transparent 65%);
+  animation: orb-drift-b 34s ease-in-out infinite;
 }
 .offer-slider__orb--3 {
-  width: 460px;
-  height: 460px;
+  width: 420px;
+  height: 420px;
   top: 40%;
   left: 50%;
-  background: radial-gradient(circle at 50% 50%, #00d0ff, transparent 70%);
   opacity: 0.28;
-  animation: orb-drift-c 30s ease-in-out infinite;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 208, 255, 0.4), transparent 65%);
+  animation: orb-drift-c 38s ease-in-out infinite;
 }
 @keyframes orb-drift-a {
   0%, 100% { transform: translate(0, 0) scale(1); }
@@ -122,10 +125,10 @@
     clamp(2.4rem, 4vw, 3rem);
   border-radius: clamp(22px, 3vw, 34px);
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 45%, rgba(255, 255, 255, 0) 100%),
-    linear-gradient(180deg, rgba(20, 22, 55, 0.65) 0%, rgba(14, 16, 42, 0.55) 100%);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+    linear-gradient(160deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 45%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, rgba(20, 22, 55, 0.78) 0%, rgba(14, 16, 42, 0.72) 100%);
+  /* backdrop-filter is expensive on a 1360px-wide card; the card is already
+     opaque enough over the dark section so we don't need to blur through it. */
   box-shadow:
     0 40px 100px rgba(4, 5, 20, 0.55),
     0 8px 28px rgba(4, 5, 20, 0.35),
@@ -394,9 +397,8 @@
   align-items: center;
   justify-content: center;
   color: #f4d9a6;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(216, 171, 90, 0.25);
-  backdrop-filter: blur(8px);
   transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
@@ -459,11 +461,19 @@
   display: block;
   width: 100%;
   height: 100%;
-  transform: scaleX(0);
   transform-origin: left center;
   background: linear-gradient(90deg, #d8ab5a 0%, #f4d9a6 50%, #d8ab5a 100%);
-  box-shadow: 0 0 12px rgba(216, 171, 90, 0.6);
+  box-shadow: 0 0 10px rgba(216, 171, 90, 0.55);
   border-radius: 100px;
+  animation: offer-slider-progress 6s linear forwards;
+  will-change: transform;
+}
+.offer-slider__progress-fill.is-paused {
+  animation-play-state: paused;
+}
+@keyframes offer-slider-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 /* ---------- Responsive ---------- */

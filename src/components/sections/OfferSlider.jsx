@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   BadgeCheck,
@@ -68,14 +68,11 @@ const SLIDES = [
   },
 ]
 
-const AUTO_INTERVAL = 6000
+const AUTO_INTERVAL_MS = 6000
 
 export default function OfferSlider() {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
-  const [progress, setProgress] = useState(0)
-  const rafRef = useRef(null)
-  const startRef = useRef(null)
 
   const go = useCallback(
     (dir) => setIndex((i) => (i + dir + SLIDES.length) % SLIDES.length),
@@ -83,30 +80,15 @@ export default function OfferSlider() {
   )
   const jumpTo = useCallback((i) => setIndex(i), [])
 
-  // Progress bar + auto-advance driven by rAF so it stays smooth.
+  // Auto-advance — plain setTimeout, no per-frame state updates.
+  // The progress bar itself is a pure CSS animation (see .offer-slider__progress-fill),
+  // so we don't need JS to drive it.
   useEffect(() => {
-    if (paused) {
-      cancelAnimationFrame(rafRef.current)
-      return undefined
-    }
-    startRef.current = performance.now()
-    setProgress(0)
-
-    const tick = (t) => {
-      const elapsed = t - startRef.current
-      const pct = Math.min(elapsed / AUTO_INTERVAL, 1)
-      setProgress(pct)
-      if (pct >= 1) {
-        go(1)
-        return
-      }
-      rafRef.current = requestAnimationFrame(tick)
-    }
-    rafRef.current = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(rafRef.current)
+    if (paused) return undefined
+    const id = setTimeout(() => go(1), AUTO_INTERVAL_MS)
+    return () => clearTimeout(id)
   }, [index, paused, go])
 
-  // Keyboard support when the slider is in focus / hovered.
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'ArrowLeft') go(-1)
@@ -252,11 +234,11 @@ export default function OfferSlider() {
           </button>
         </div>
 
-        {/* Auto-advance progress rail */}
         <div className="offer-slider__progress" aria-hidden="true">
+          {/* Re-mount on every slide change so the CSS keyframe restarts from 0. */}
           <span
-            className="offer-slider__progress-fill"
-            style={{ transform: `scaleX(${progress})` }}
+            key={`${index}-${paused ? 'paused' : 'running'}`}
+            className={`offer-slider__progress-fill ${paused ? 'is-paused' : ''}`}
           />
         </div>
       </div>
