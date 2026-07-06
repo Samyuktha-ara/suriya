@@ -31,7 +31,7 @@ export default function OtherCars() {
           eyebrow="The NEXA Range"
           title="Explore More"
           highlight="NEXA Cars in Thanjavur"
-          subtitle="Beyond the Fronx, discover the complete premium NEXA line-up at Suriya NEXA Thanjavur — every model available for a test drive today."
+          subtitle="Discover the complete premium NEXA line-up at NEXA Thanjavur — every model available for a doorstep test drive with Suriya Boopathy today."
         />
 
         <motion.ul

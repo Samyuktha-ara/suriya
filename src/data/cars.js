@@ -19,7 +19,6 @@ export const EVITARA = {
   ],
   variants: [
     { name: 'Delta', engine: '49 kWh · 2WD', highlight: 'Smart entry' },
-    { name: 'Delta+', engine: '61 kWh · 2WD', highlight: 'Best range' },
     { name: 'Zeta', engine: '61 kWh · 2WD', highlight: 'Feature packed' },
     { name: 'Alpha AWD', engine: '61 kWh · AllGrip-e', highlight: 'Dual motor' },
   ],

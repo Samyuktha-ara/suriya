@@ -15,9 +15,9 @@ export default function FAQ() {
       <div className="container">
         <SectionHeading
           eyebrow="Questions & Answers"
-          title="Suzuki Fronx & NEXA Thanjavur"
+          title="NEXA Thanjavur"
           highlight="FAQs"
-          subtitle="Everything you need to know about buying a Suzuki Fronx in Thanjavur — pricing, mileage, finance, delivery, warranty and more."
+          subtitle="Everything you need to know about booking a NEXA car with Suriya Boopathy — pricing across the full range, finance, delivery, warranty and more."
         />
 
         <ul className="faq__list">
@@ -64,8 +64,8 @@ export default function FAQ() {
 
         <div className="faq__cta glass">
           <div>
-            <h3>Still have a question about the Fronx?</h3>
-            <p>Our NEXA advisors in Thanjavur are ready to help you with pricing, offers and test drives.</p>
+            <h3>Still have a question?</h3>
+            <p>Ask Suriya Boopathy directly — pricing, offers, doorstep test drives across the full NEXA range.</p>
           </div>
           <Button href={DEALER.phoneHref} variant="call" icon={Phone}>
             Call {DEALER.phoneDisplay}
