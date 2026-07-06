@@ -29,42 +29,44 @@ export default function FeaturedCar() {
     <section className="section" id="fronx" aria-labelledby="fronx-title">
       <div className="container">
         <div className="featured">
-          {/* Left: visual */}
-          <motion.div
-            className="featured__visual glass"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportOnce}
-          >
-            <span className="featured__badge">
-              <Sparkles size={14} aria-hidden="true" /> {FRONX.badge}
-            </span>
-            <div className="featured__art">
-              <img
-                src={fronxImg}
-                alt="Suzuki Fronx compact SUV available at Suriya NEXA showroom Thanjavur"
-                loading="lazy"
-                decoding="async"
-                width="1560"
-                height="1040"
-              />
-            </div>
-            <div className="featured__price">
-              <span className="featured__price-label">Starting at</span>
-              <span className="featured__price-value grad-text">{FRONX.priceFrom}</span>
-              <span className="featured__price-note">ex-showroom · Thanjavur</span>
-            </div>
+          {/* Left: visual (wrapper is sticky; motion goes on inner element so framer-motion's inline transform can't break sticky) */}
+          <div className="featured__visual-sticky">
+            <motion.div
+              className="featured__visual glass"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
+            >
+              <span className="featured__badge">
+                <Sparkles size={14} aria-hidden="true" /> {FRONX.badge}
+              </span>
+              <div className="featured__art">
+                <img
+                  src={fronxImg}
+                  alt="Suzuki Fronx compact SUV available at Suriya NEXA showroom Thanjavur"
+                  loading="lazy"
+                  decoding="async"
+                  width="1560"
+                  height="1040"
+                />
+              </div>
+              <div className="featured__price">
+                <span className="featured__price-label">Starting at</span>
+                <span className="featured__price-value grad-text">{FRONX.priceFrom}</span>
+                <span className="featured__price-note">ex-showroom · Thanjavur</span>
+              </div>
 
-            <ul className="featured__quick">
-              <li>
-                <Fuel size={16} aria-hidden="true" /> {FRONX.mileage}
-              </li>
-              <li>
-                <Gauge size={16} aria-hidden="true" /> 1.0L Turbo Boosterjet
-              </li>
-            </ul>
-          </motion.div>
+              <ul className="featured__quick">
+                <li>
+                  <Fuel size={16} aria-hidden="true" /> {FRONX.mileage}
+                </li>
+                <li>
+                  <Gauge size={16} aria-hidden="true" /> 1.0L Turbo Boosterjet
+                </li>
+              </ul>
+            </motion.div>
+          </div>
 
           {/* Right: details */}
           <motion.div

@@ -12,9 +12,9 @@ export default function Testimonials() {
       <div className="container">
         <SectionHeading
           eyebrow="Customer Reviews"
-          title="Loved by 15,000+"
-          highlight="Happy Customers"
-          subtitle={`Rated ${DEALER.rating}★ by ${DEALER.reviewCount} customers across Thanjavur and beyond. Here's what our NEXA family has to say.`}
+          title="Loved by 235+"
+          highlight="Happy Families"
+          subtitle={`Rated ${DEALER.rating}★ by ${DEALER.reviewCount} customers Suriya Boopathy has personally delivered across Thanjavur. Here's what the NEXA family has to say.`}
         />
 
         <div className="reviews__rating" role="img" aria-label={`Average rating ${DEALER.rating} out of 5`}>

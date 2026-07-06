@@ -10,10 +10,10 @@ export default function WhyChoose() {
     <section className="section section--tint" id="why-choose" aria-labelledby="why-choose-title">
       <div className="container">
         <SectionHeading
-          eyebrow="Why Suriya NEXA"
-          title="Thanjavur's Most Trusted"
-          highlight="NEXA Dealer"
-          subtitle="From your first enquiry to your joyful delivery, every step at Suriya NEXA Thanjavur is designed around a premium, transparent and stress-free car-buying experience."
+          eyebrow="Why Book with Suriya Boopathy"
+          title="Thanjavur's Trusted"
+          highlight="NEXA Relationship Manager"
+          subtitle="From your first enquiry to your joyful delivery, every step with Suriya Boopathy is personal, transparent and stress-free — 235+ happy families in just 2 years."
         />
 
         <motion.ul

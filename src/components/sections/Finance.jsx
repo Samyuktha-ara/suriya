@@ -23,12 +23,13 @@ export default function Finance() {
               Finance Assistance
             </motion.span>
             <motion.h2 className="finance__title" id="finance-title" variants={fadeUp}>
-              Drive Home Your Fronx with <span className="grad-text">Easy Finance</span>
+              July 2026 · <span className="grad-text">₹30,000 Total Benefit</span>
             </motion.h2>
             <motion.p className="finance__text" variants={fadeUp}>
-              Get up to <strong>90% on-road funding</strong>, the lowest EMIs and instant loan
-              approval with all leading banks — plus the best exchange value for your old car. Our
-              finance experts at Suriya NEXA Thanjavur make owning a NEXA car effortless.
+              This month, book your NEXA through me and unlock a <strong>₹15,000 consumer offer</strong>,
+              a <strong>₹15,000 exchange bonus</strong> and <strong>Punjab National Bank finance at
+              7.75%</strong> — up to 90% on-road funding with same-day approval. Simple, transparent,
+              and delivered to your doorstep.
             </motion.p>
             <motion.div className="finance__cta" variants={fadeUp}>
               <Button href={DEALER.phoneHref} variant="call" icon={Phone}>

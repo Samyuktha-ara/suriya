@@ -6,106 +6,106 @@
 export const WHY_CHOOSE = [
   {
     icon: 'BadgeCheck',
-    title: 'Certified NEXA Dealer',
-    text: 'A fully authorized Maruti Suzuki NEXA dealer in Thanjavur — genuine cars, genuine pricing, factory warranty.',
+    title: 'Certified NEXA Executive',
+    text: 'Suriya Boopathy is an authorized Maruti Suzuki NEXA Senior Relationship Manager — genuine cars, transparent pricing and factory warranty.',
   },
   {
     icon: 'Car',
-    title: 'Latest NEXA Models',
-    text: 'The complete range — Fronx, Baleno, Grand Vitara, Jimny, Invicto, XL6 & Ignis — ready for a test drive.',
+    title: 'Baleno Specialist',
+    text: 'Baleno is my top-moving model — plus the full NEXA range: Fronx, Grand Vitara, Jimny, Invicto, XL6 & Ignis, ready for a test drive.',
   },
   {
     icon: 'Landmark',
-    title: 'Easy Finance Assistance',
-    text: 'Loans up to 90%, low EMIs and instant approvals with every leading bank under one roof.',
+    title: 'Punjab National Bank @ 7.75%',
+    text: 'Loans up to 90% on-road funding at 7.75% interest through Punjab National Bank, with instant approval and every leading bank on tap.',
   },
   {
     icon: 'Rocket',
-    title: 'Fast Delivery',
-    text: 'Priority allocation and quick delivery on popular Fronx variants across Thanjavur district.',
+    title: 'Doorstep Test Drive',
+    text: 'Book through me and I bring the Baleno, Fronx or any NEXA car to your doorstep — no showroom queue, no waiting.',
   },
   {
     icon: 'RefreshCw',
-    title: 'Best Exchange Value',
-    text: 'Maruti Suzuki True Value gives you the highest, most transparent price for your old car.',
+    title: '₹15,000 Exchange Bonus',
+    text: 'This July, get a ₹15,000 exchange bonus on top of the best Maruti Suzuki True Value price for your old car.',
   },
   {
     icon: 'Users',
-    title: 'Experienced Advisors',
-    text: 'A friendly, expert NEXA team that guides you to the right variant — never any pressure.',
+    title: '2 Years · 235+ Deliveries',
+    text: 'Two focused years at NEXA and 235+ happy families delivered — priority allotment and personal attention on every booking.',
   },
   {
     icon: 'Wrench',
-    title: 'After-Sales Support',
-    text: 'Genuine spares, doorstep service pickup and NEXA-grade servicing keep your car at its best.',
+    title: 'Hassle-Free Documentation',
+    text: 'I personally handle RTO, insurance and finance paperwork — you sign, I run around. Genuine spares and NEXA-grade service throughout.',
   },
   {
     icon: 'Sparkles',
-    title: 'Premium Experience',
-    text: 'A world-class NEXA lounge experience the moment you walk into our Thanjavur showroom.',
+    title: 'Priority Allotment',
+    text: 'A premium NEXA lounge experience with priority allotment on booking — every customer treated like family.',
   },
 ]
 
 export const HERO_STATS = [
-  { value: '15,000+', label: 'Happy Customers' },
-  { value: '4.9★', label: 'Google Rating' },
-  { value: '28.5', label: 'km/l Mileage' },
+  { value: '235+', label: 'Happy Families' },
+  { value: '4.9★', label: 'Customer Rating' },
+  { value: '2 Yrs', label: 'NEXA Experience' },
   { value: '24hr', label: 'Test Drive Booking' },
 ]
 
 export const FINANCE_OPTIONS = [
   {
-    icon: 'Calculator',
-    title: 'Low EMI Plans',
-    text: 'Drive home a Fronx from budget-friendly monthly EMIs tailored to your income.',
+    icon: 'BadgeCheck',
+    title: 'Consumer Offer · ₹15,000',
+    text: 'Flat ₹15,000 consumer discount this July 2026 on Baleno and select NEXA models — booked directly through me.',
   },
   {
     icon: 'RefreshCw',
-    title: 'Car Exchange',
-    text: 'Best-in-market exchange bonus on your old car via Maruti Suzuki True Value.',
+    title: 'Exchange Bonus · ₹15,000',
+    text: 'Additional ₹15,000 exchange bonus over the best Maruti Suzuki True Value price for your old car.',
   },
   {
     icon: 'Landmark',
-    title: 'Easy Car Loans',
-    text: 'Up to 90% on-road funding with the lowest interest rates from partner banks.',
+    title: 'PNB Finance @ 7.75%',
+    text: 'Low-interest car loan at 7.75% through Punjab National Bank, up to 90% on-road funding with instant approval.',
   },
   {
     icon: 'ShieldCheck',
     title: 'Insurance Support',
-    text: 'Hassle-free NEXA insurance with cashless claims and complete coverage guidance.',
+    text: 'Hassle-free NEXA insurance with cashless claims and complete coverage guidance — I handle it end to end.',
   },
   {
     icon: 'Zap',
-    title: 'Instant Approval',
-    text: 'On-the-spot loan approvals so you can book your Fronx the very same day.',
+    title: 'Same-Day Approval',
+    text: 'On-the-spot loan approval so you can book your Baleno the very same day and drive home stress-free.',
   },
 ]
 
 export const PROCESS_STEPS = [
   {
-    icon: 'Building2',
-    title: 'Visit the Showroom',
-    text: 'Walk into Suriya NEXA Thanjavur and explore the Fronx & full NEXA range in person.',
+    icon: 'Phone',
+    title: 'Call or WhatsApp Me',
+    text: 'Reach out on 73975 49735 or WhatsApp and share your favourite NEXA model — I take it from there.',
   },
   {
     icon: 'Car',
-    title: 'Take a Test Drive',
-    text: 'Experience the Fronx on Thanjavur roads — showroom or doorstep, your choice.',
+    title: 'Doorstep Test Drive',
+    text: 'I bring the Baleno, Fronx or any NEXA car to your home or office — experience it on your roads, your time.',
   },
   {
     icon: 'Landmark',
-    title: 'Choose Finance',
-    text: 'Pick the EMI, exchange and loan plan that fits your budget with instant approval.',
+    title: 'PNB Finance @ 7.75%',
+    text: 'Pick the EMI and exchange plan, apply for Punjab National Bank finance at 7.75% and get same-day approval.',
   },
   {
     icon: 'FileCheck',
-    title: 'Easy Documentation',
-    text: 'Our team handles RTO, insurance and paperwork — quick, transparent and stress-free.',
+    title: 'Hassle-Free Documentation',
+    text: 'I personally handle RTO, insurance and paperwork — quick, transparent and stress-free from start to finish.',
   },
   {
     icon: 'Gift',
     title: 'Joyful Delivery',
-    text: 'Drive home your brand-new Fronx with a celebratory NEXA delivery experience.',
+    text: 'Drive home your brand-new NEXA with a celebratory delivery experience — one of 235+ happy families.',
   },
 ]
 

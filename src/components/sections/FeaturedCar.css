@@ -6,9 +6,15 @@
 }
 
 /* ---- Visual card ---- */
-.featured__visual {
+/* Sticky lives on the wrapper so framer-motion's inline transform
+   on the child (which resets to `none`, but can create a stacking
+   context) can't defeat sticky behaviour. */
+.featured__visual-sticky {
   position: sticky;
   top: calc(var(--nav-h) + 20px);
+  align-self: start;
+}
+.featured__visual {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, #ffffff, #f7f8fd);
@@ -231,7 +237,7 @@
   .featured {
     grid-template-columns: 1fr;
   }
-  .featured__visual {
+  .featured__visual-sticky {
     position: static;
   }
   .featured__variant-grid {
