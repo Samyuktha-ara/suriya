@@ -17,11 +17,11 @@ import { NEXA_MODELS } from '../../data/cars'
 import { fadeUp, viewportOnce } from '../../animations/variants'
 import './Contact.css'
 
-const MODELS = ['Suzuki Fronx', ...NEXA_MODELS.map((c) => `Suzuki ${c.name}`)]
+const MODELS = ['Suzuki e-Vitara', ...NEXA_MODELS.map((c) => `Suzuki ${c.name}`)]
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
-  const [form, setForm] = useState({ name: '', phone: '', model: 'Suzuki Fronx', message: '' })
+  const [form, setForm] = useState({ name: '', phone: '', model: 'Suzuki e-Vitara', message: '' })
 
   const update = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
 

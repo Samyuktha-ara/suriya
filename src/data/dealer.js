@@ -11,8 +11,8 @@ export const DEALER = {
   tagline: 'Senior Relationship Manager · Authorized Suzuki NEXA · Thanjavur',
   owner: 'Suriya Boopathy',
   designation: 'Senior Relationship Manager',
-  experience: '2 Years with NEXA',
-  carsDelivered: '235+',
+  experience: '3 Years with NEXA',
+  carsDelivered: '370+',
   city: 'Thanjavur',
   state: 'Tamil Nadu',
   pincode: '613001',
@@ -28,7 +28,7 @@ export const DEALER = {
   mapsEmbed:
     'https://www.google.com/maps?q=Thanjavur,Tamil%20Nadu&z=13&output=embed',
   rating: '4.9',
-  reviewCount: '235',
+  reviewCount: '370',
   hours: [
     { day: 'Monday – Saturday', time: '9:30 AM – 8:00 PM' },
     { day: 'Sunday', time: '10:00 AM – 6:00 PM' },
@@ -67,7 +67,7 @@ export const SERVICE_AREAS = [
 // Primary navigation links (anchor-based single page).
 export const NAV_LINKS = [
   { label: 'Why Suriya', href: '#why-choose' },
-  { label: 'Fronx', href: '#fronx' },
+  { label: 'e-Vitara', href: '#evitara' },
   { label: 'NEXA Range', href: '#models' },
   { label: 'Finance', href: '#finance' },
   { label: 'Reviews', href: '#testimonials' },

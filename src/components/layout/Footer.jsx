@@ -21,8 +21,8 @@ export default function Footer() {
             <small>Suriya Boopathy · Senior Relationship Manager · NEXA Thanjavur</small>
           </div>
           <p className="footer__about">
-            I'm Suriya Boopathy — a Senior Relationship Manager at NEXA Thanjavur with 2 years of
-            experience and 235+ happy families delivered. Book your Baleno, Fronx, Grand Vitara,
+            I'm Suriya Boopathy — a Senior Relationship Manager at NEXA Thanjavur with 3 years of
+            experience and 370+ happy families delivered. Book your Baleno, Fronx, Grand Vitara,
             Jimny, Invicto or XL6 directly with me for doorstep test drives, ₹30,000 total July
             benefit and PNB finance at 7.75%.
           </p>

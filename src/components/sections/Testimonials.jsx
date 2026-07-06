@@ -12,7 +12,7 @@ export default function Testimonials() {
       <div className="container">
         <SectionHeading
           eyebrow="Customer Reviews"
-          title="Loved by 235+"
+          title="Loved by 370+"
           highlight="Happy Families"
           subtitle={`Rated ${DEALER.rating}★ by ${DEALER.reviewCount} customers Suriya Boopathy has personally delivered across Thanjavur. Here's what the NEXA family has to say.`}
         />

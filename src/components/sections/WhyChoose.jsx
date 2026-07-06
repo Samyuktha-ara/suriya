@@ -13,7 +13,7 @@ export default function WhyChoose() {
           eyebrow="Why Book with Suriya Boopathy"
           title="Thanjavur's Trusted"
           highlight="NEXA Relationship Manager"
-          subtitle="From your first enquiry to your joyful delivery, every step with Suriya Boopathy is personal, transparent and stress-free — 235+ happy families in just 2 years."
+          subtitle="From your first enquiry to your joyful delivery, every step with Suriya Boopathy is personal, transparent and stress-free — 370+ happy families in just 3 years."
         />
 
         <motion.ul

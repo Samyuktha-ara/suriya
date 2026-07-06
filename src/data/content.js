@@ -31,8 +31,8 @@ export const WHY_CHOOSE = [
   },
   {
     icon: 'Users',
-    title: '2 Years · 235+ Deliveries',
-    text: 'Two focused years at NEXA and 235+ happy families delivered — priority allotment and personal attention on every booking.',
+    title: '3 Years · 370+ Deliveries',
+    text: 'Three focused years at NEXA and 370+ happy families delivered — priority allotment and personal attention on every booking.',
   },
   {
     icon: 'Wrench',
@@ -47,9 +47,9 @@ export const WHY_CHOOSE = [
 ]
 
 export const HERO_STATS = [
-  { value: '235+', label: 'Happy Families' },
+  { value: '370+', label: 'Happy Families' },
   { value: '4.9★', label: 'Customer Rating' },
-  { value: '2 Yrs', label: 'NEXA Experience' },
+  { value: '3 Yrs', label: 'NEXA Experience' },
   { value: '24hr', label: 'Test Drive Booking' },
 ]
 
@@ -105,7 +105,7 @@ export const PROCESS_STEPS = [
   {
     icon: 'Gift',
     title: 'Joyful Delivery',
-    text: 'Drive home your brand-new NEXA with a celebratory delivery experience — one of 235+ happy families.',
+    text: 'Drive home your brand-new NEXA with a celebratory delivery experience — one of 370+ happy families.',
   },
 ]
 

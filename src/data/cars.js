@@ -3,56 +3,66 @@
  * so the site ships with zero external image dependencies.
  */
 
-export const FRONX = {
-  name: 'Suzuki Fronx',
-  art: 'fronx',
-  tagline: 'The Crossover That Turns Heads in Thanjavur',
-  priceFrom: '₹7.49 Lakh*',
-  badge: 'Most Loved SUV',
+export const EVITARA = {
+  name: 'Suzuki e-Vitara',
+  art: 'grandvitara',
+  tagline: "NEXA's First-Ever Premium Electric SUV",
+  priceFrom: '₹17.99 Lakh*',
+  badge: 'NEXA · Electric SUV',
   highlights: [
-    '1.0L Turbo Boosterjet Engine',
-    'Up to 28.51 km/l Mileage',
-    '6 Airbags Standard',
-    'Head-Up Display',
-    'Suzuki Connect Telematics',
-    '9" SmartPlay Pro+ Infotainment',
+    'Up to 500 km Range (WLTP)',
+    '61 kWh Lithium-ion Battery',
+    'AllGrip-e Dual-Motor AWD',
+    '7 Airbags Standard',
+    'Level 2 ADAS Suite',
+    '10.25" SmartPlay Pro+ Infotainment',
   ],
   variants: [
-    { name: 'Sigma', engine: '1.2L', highlight: 'Smart entry' },
-    { name: 'Delta / Delta+', engine: '1.2L', highlight: 'Best value' },
-    { name: 'Zeta', engine: '1.2L / 1.0L Turbo', highlight: 'Feature packed' },
-    { name: 'Alpha', engine: '1.0L Turbo', highlight: 'Fully loaded' },
+    { name: 'Delta', engine: '49 kWh · 2WD', highlight: 'Smart entry' },
+    { name: 'Delta+', engine: '61 kWh · 2WD', highlight: 'Best range' },
+    { name: 'Zeta', engine: '61 kWh · 2WD', highlight: 'Feature packed' },
+    { name: 'Alpha AWD', engine: '61 kWh · AllGrip-e', highlight: 'Dual motor' },
   ],
   engines: [
-    { label: '1.2L Advanced K-Series Dual Jet, Dual VVT with Smart Hybrid' },
-    { label: '1.0L Turbo Boosterjet — 100 PS of instant performance' },
+    { label: '49 kWh single-motor 2WD · ~380 km range' },
+    { label: '61 kWh single-motor 2WD · up to 500 km WLTP range' },
+    { label: '61 kWh AllGrip-e dual-motor AWD · instant torque, all-terrain grip' },
   ],
-  mileage: 'Up to 28.51 km/l (ARAI certified)',
+  mileage: 'Up to 500 km per full charge',
   safety: [
-    'Up to 6 airbags',
+    '7 airbags standard',
+    'Level 2 ADAS — adaptive cruise, lane keep, AEB',
     'ESP with Hill Hold Assist',
-    'ABS with EBD',
-    'All-4-disc brakes (Turbo)',
+    'All-4-disc brakes',
     '360° View Camera',
-    'Rear parking sensors & TPMS',
+    'ISOFIX anchors & TPMS',
   ],
   technology: [
-    'Suzuki Connect with 40+ features',
+    '10.25" SmartPlay Pro+ infotainment',
     'Wireless Apple CarPlay & Android Auto',
     'Head-Up Display',
-    'Wireless charger',
-    'Voice assist & OTA updates',
+    'Wireless charger & OTA updates',
+    'Suzuki Connect for EV — remote charge, climate & range',
   ],
   interior: [
-    'Layered dashboard with soft-touch finish',
+    'Fixed panoramic glass roof',
     'Premium leatherette upholstery',
-    'Automatic climate control',
-    'Ambient lighting',
-    'Flat-bottom leather steering',
+    'Ventilated & powered front seats',
+    'Dual-zone automatic climate',
+    'Ambient lighting with EV themes',
   ],
 }
 
 export const NEXA_MODELS = [
+  {
+    name: 'Fronx',
+    art: 'fronx',
+    priceFrom: '₹7.49 Lakh*',
+    body: 'Compact SUV',
+    description:
+      'The crossover that turns heads in Thanjavur — Turbo Boosterjet performance with SUV confidence.',
+    tags: ['1.0L Turbo', 'Up to 28.51 km/l', 'Head-Up Display'],
+  },
   {
     name: 'Baleno',
     art: 'baleno',
@@ -100,36 +110,36 @@ export const NEXA_MODELS = [
   },
 ]
 
-// "Why Buy Fronx" — feature timeline.
-export const FRONX_REASONS = [
+// "Why Buy e-Vitara" — feature timeline.
+export const EVITARA_REASONS = [
   {
-    icon: 'Fuel',
-    title: 'Class-Leading Mileage',
-    text: 'Up to 28.51 km/l with Smart Hybrid — save every single time you drive across Thanjavur.',
+    icon: 'Zap',
+    title: 'Zero-Emission Range',
+    text: 'Up to 500 km of WLTP range on a single charge — a full week of Thanjavur commuting on one plug-in.',
   },
   {
     icon: 'Gauge',
-    title: 'Turbo Performance',
-    text: '1.0L Turbo Boosterjet delivers 100 PS & 147.6 Nm for effortless highway overtakes.',
+    title: 'Instant EV Torque',
+    text: 'AllGrip-e dual-motor delivers seamless power the moment you press — no gears, no delay, effortless overtakes.',
   },
   {
     icon: 'ShieldCheck',
     title: 'Built Safe',
-    text: 'Up to 6 airbags, ESP, Hill Hold and a strong HEARTECT platform keep your family protected.',
+    text: '7 airbags, Level 2 ADAS, ESP and a reinforced EV platform keep your family fully protected.',
   },
   {
     icon: 'Smartphone',
-    title: 'Connected Technology',
-    text: 'Suzuki Connect, Head-Up Display and a 9" wireless infotainment keep you always in control.',
+    title: 'Connected EV Tech',
+    text: 'Suzuki Connect for EV, HUD and a 10.25" wireless infotainment let you remote-charge and pre-cool from your phone.',
   },
   {
     icon: 'Mountain',
-    title: 'SUV Ground Clearance',
-    text: '190 mm ground clearance confidently handles Thanjavur roads, speed breakers and monsoons.',
+    title: 'SUV Confidence',
+    text: 'Bold SUV proportions with best-in-class ground clearance — Thanjavur roads and monsoons, handled.',
   },
   {
     icon: 'Package',
-    title: 'Generous Boot Space',
-    text: '308 litres of luggage room — perfect for weekend getaways to Kumbakonam and beyond.',
+    title: 'Flat-Floor Cabin',
+    text: 'EV flat floor unlocks huge knee-room, a panoramic glass roof and generous boot space for weekend getaways.',
   },
 ]
