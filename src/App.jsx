@@ -32,9 +32,9 @@ export default function App() {
         <Hero />
         <Suspense fallback={<SectionFallback />}>
           <OfferSlider />
-          <WhyChoose />
           <FeaturedCar />
           <OtherCars />
+          <WhyChoose />
           <WhyBuyFronx />
           <Finance />
           <Testimonials />

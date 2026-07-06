@@ -82,15 +82,6 @@ export const NEXA_MODELS = [
     tags: ['Strong Hybrid', 'AllGrip AWD', 'Panoramic Sunroof'],
   },
   {
-    name: 'Jimny',
-    art: 'jimny',
-    priceFrom: '₹12.74 Lakh*',
-    body: 'Lifestyle 4x4 SUV',
-    description:
-      'The legendary go-anywhere 4x4. AllGrip Pro with a proven ladder-frame chassis for real adventure.',
-    tags: ['AllGrip Pro 4x4', 'Ladder Frame', 'Iconic Design'],
-  },
-  {
     name: 'Invicto',
     art: 'invicto',
     priceFrom: '₹24.92 Lakh*',
@@ -107,6 +98,15 @@ export const NEXA_MODELS = [
     description:
       'Captain seats, commanding stance and Smart Hybrid efficiency — the ideal premium family MPV.',
     tags: ['Captain Seats', 'Smart Hybrid', 'Ventilated Seats'],
+  },
+  {
+    name: 'Jimny',
+    art: 'jimny',
+    priceFrom: '₹12.74 Lakh*',
+    body: 'Lifestyle 4x4 SUV',
+    description:
+      'The legendary go-anywhere 4x4. AllGrip Pro with a proven ladder-frame chassis for real adventure.',
+    tags: ['AllGrip Pro 4x4', 'Ladder Frame', 'Iconic Design'],
   },
 ]
 

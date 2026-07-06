@@ -1,3 +1,105 @@
+.reviews-section {
+  position: relative;
+}
+
+/* ---------- Polaroid pinboard ---------- */
+/* A staged fan of 4 delivery photos between the rating and the review grid.
+   Each polaroid is fully visible, tilted organically, and lifts on hover. */
+.reviews__pinboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.8rem, 2vw, 1.6rem);
+  margin: 1.4rem auto 2.4rem;
+  padding: 1.8rem 0.5rem 2.2rem;
+  perspective: 1000px;
+  flex-wrap: wrap;
+}
+
+.reviews__polaroid {
+  position: relative;
+  width: clamp(180px, 18vw, 250px);
+  padding: 14px 14px 40px;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow:
+    0 28px 56px rgba(23, 28, 66, 0.2),
+    0 8px 18px rgba(23, 28, 66, 0.1);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease, z-index 0s 0.4s;
+  z-index: 1;
+}
+
+.reviews__polaroid:hover {
+  transform: rotate(0deg) translateY(-14px) scale(1.06);
+  box-shadow:
+    0 34px 70px rgba(23, 28, 66, 0.28),
+    0 10px 22px rgba(23, 28, 66, 0.14);
+  z-index: 5;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.reviews__polaroid-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.reviews__polaroid-caption {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-mute);
+  letter-spacing: 0.02em;
+}
+
+.reviews__polaroid-tape {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 76px;
+  height: 22px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: linear-gradient(
+    180deg,
+    rgba(216, 171, 90, 0.45) 0%,
+    rgba(244, 217, 166, 0.35) 100%
+  );
+  border: 1px solid rgba(176, 125, 43, 0.3);
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(23, 28, 66, 0.08);
+}
+
+/* Fan spread — outer polaroids tilt more, inner ones sit higher.
+   No horizontal overlap; the flex gap gives each polaroid room to breathe. */
+.reviews__polaroid--1 {
+  transform: rotate(-6deg) translateY(4px);
+}
+.reviews__polaroid--2 {
+  transform: rotate(-2deg) translateY(-6px);
+}
+.reviews__polaroid--3 {
+  transform: rotate(2deg) translateY(-6px);
+}
+.reviews__polaroid--4 {
+  transform: rotate(6deg) translateY(4px);
+}
+
+/* Content sits above the collage. */
+.reviews__container {
+  position: relative;
+  z-index: 1;
+}
+
 .reviews__rating {
   display: flex;
   flex-direction: column;
@@ -90,9 +192,35 @@
   .reviews__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .reviews__polaroid {
+    width: clamp(130px, 22vw, 180px);
+    padding: 10px 10px 30px;
+  }
+  .reviews__polaroid-caption {
+    font-size: 0.7rem;
+    bottom: 8px;
+  }
+  .reviews__polaroid-tape {
+    width: 52px;
+    height: 16px;
+  }
 }
 @media (max-width: 560px) {
   .reviews__grid {
     grid-template-columns: 1fr;
   }
+  .reviews__pinboard {
+    gap: 0.6rem;
+    margin: 0.4rem auto 2rem;
+    padding: 1.2rem 0 1.6rem;
+  }
+  .reviews__polaroid {
+    width: clamp(120px, 40vw, 160px);
+    margin-right: 0 !important;
+  }
+  /* On phones show all four in a wrap-friendly grid instead of the tight fan */
+  .reviews__polaroid--1 { transform: rotate(-6deg); }
+  .reviews__polaroid--2 { transform: rotate(4deg); }
+  .reviews__polaroid--3 { transform: rotate(-3deg); }
+  .reviews__polaroid--4 { transform: rotate(5deg); }
 }
