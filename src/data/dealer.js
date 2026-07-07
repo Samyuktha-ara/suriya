@@ -83,6 +83,16 @@ export const SERVICE_AREAS = [
   'Ayyampettai',
   'Budalur',
   'Vallam',
+  'Thiruvaiyaru',
+  'Swamimalai',
+  'Mannargudi',
+  'Ammapettai',
+  'Madukkur',
+  'Thirukattupalli',
+  'Karaikudi',
+  'Mayiladuthurai',
+  'Muthupettai',
+  'Trichy',
 ]
 
 // Primary navigation links (anchor-based single page).
