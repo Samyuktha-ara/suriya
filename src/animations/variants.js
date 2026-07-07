@@ -44,5 +44,9 @@ export const stagger = {
   },
 }
 
-/** Shared viewport config for whileInView animations. */
-export const viewportOnce = { once: true, amount: 0.2 }
+/** Shared viewport config for whileInView animations.
+ * `amount: 'some'` (trigger as soon as any part enters) rather than a
+ * fraction — a fixed fraction like 0.2 can NEVER be met for elements
+ * taller than the viewport (e.g. the single-column car grid on mobile),
+ * leaving them stuck at opacity 0. */
+export const viewportOnce = { once: true, amount: 'some' }
