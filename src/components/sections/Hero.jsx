@@ -9,31 +9,40 @@ import {
   MessageCircle,
   CalendarCheck,
   Star,
-} from 'lucide-react'
-import { DEALER } from '../../data/dealer'
-import heroImg from '../../assets/hero.webp'
-import heroMobileImg from '../../assets/mobile-hero.webp'
-import './Hero.css'
+} from "lucide-react";
+import { DEALER } from "../../data/dealer";
+import heroImg from "../../assets/hero.webp";
+import heroMobileImg from "../../assets/mobile-hero.webp";
+import "./Hero.css";
 
 const FEATURES = [
-  { icon: Award, l1: 'Premium', l2: 'Experience' },
-  { icon: Car, l1: 'Wide Range', l2: 'of Cars' },
-  { icon: ShieldCheck, l1: 'Trusted', l2: 'Service' },
-  { icon: Wallet, l1: 'Easy', l2: 'Finance' },
-  { icon: RefreshCw, l1: 'Exchange', l2: 'Offers' },
-]
+  { icon: Award, l1: "Premium", l2: "Experience" },
+  { icon: Car, l1: "Wide Range", l2: "of Cars" },
+  { icon: ShieldCheck, l1: "Trusted", l2: "Service" },
+  { icon: Wallet, l1: "Easy", l2: "Finance" },
+  { icon: RefreshCw, l1: "Exchange", l2: "Offers" },
+];
 
 export default function Hero() {
   return (
-    <section className="hero" id="top" aria-label="Suriya NEXA Thanjavur — Suzuki Fronx showroom">
+    <section
+      className="hero"
+      id="top"
+      aria-label="Suriya Boopathy — Senior Relationship Manager, NEXA Thanjavur"
+    >
       {/* Full-bleed cinematic banner (LCP element) */}
       <div className="hero__bg">
         <picture>
-          <source media="(max-width: 640px)" srcSet={heroMobileImg} width="941" height="1672" />
+          <source
+            media="(max-width: 640px)"
+            srcSet={heroMobileImg}
+            width="941"
+            height="1672"
+          />
           <img
             src={heroImg}
             className="hero__bg-img"
-            alt="Suzuki Fronx, Baleno and Grand Vitara displayed at the Suriya NEXA showroom in Thanjavur"
+            alt="Suzuki Baleno, Fronx and Grand Vitara — book through Suriya Boopathy, Senior Relationship Manager, NEXA Thanjavur"
             fetchPriority="high"
             decoding="async"
             width="1730"
@@ -46,10 +55,14 @@ export default function Hero() {
       {/* Main content */}
       <div className="hero__center container">
         <div className="hero__content">
-          <span className="hero__tag hero__reveal" style={{ '--d': '0.05s' }}>
-            SUZUKI <span className="hero__tag-sep" aria-hidden="true">|</span> NEXA · Thanjavur
+          <span className="hero__tag hero__reveal" style={{ "--d": "0.05s" }}>
+            SURIYA BOOPATHY{" "}
+            <span className="hero__tag-sep" aria-hidden="true">
+              |
+            </span>{" "}
+            Senior Relationship Manager · NEXA Thanjavur
           </span>
-          <h1 className="hero__title hero__reveal" style={{ '--d': '0.15s' }}>
+          <h1 className="hero__title hero__reveal" style={{ "--d": "0.15s" }}>
             <span className="hero__line">
               Create<span className="hero__dot">.</span>
             </span>
@@ -61,16 +74,16 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="hero__subtitle hero__reveal" style={{ '--d': '0.3s' }}>
-            Discover the NEXA range. Driven by excellence.
+          <p className="hero__subtitle hero__reveal" style={{ "--d": "0.3s" }}>
+            3 Years at NEXA · 370+ happy families delivered.
             <span className="hero__subtitle-extra">
-              {' '}
-              Book your Suzuki Fronx test drive in Thanjavur today.
+              {" "}
+              Book your doorstep Baleno test drive with Suriya Boopathy today.
             </span>
           </p>
 
           {/* Conversion CTAs */}
-          <div className="hero__cta hero__reveal" style={{ '--d': '0.42s' }}>
+          <div className="hero__cta hero__reveal" style={{ "--d": "0.42s" }}>
             <a href="#contact" className="hero__btn hero__btn--primary">
               <CalendarCheck size={19} aria-hidden="true" />
               Book Test Drive
@@ -91,26 +104,31 @@ export default function Hero() {
           </div>
 
           {/* Trust line */}
-          <div className="hero__trust hero__reveal" style={{ '--d': '0.55s' }}>
+          <div className="hero__trust hero__reveal" style={{ "--d": "0.55s" }}>
             <span className="hero__trust-stars" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} size={15} fill="currentColor" />
               ))}
             </span>
             <span>
-              <strong>4.9/5</strong> · Trusted by 15,000+ customers across Thanjavur
+              <strong>4.9/5</strong> · Trusted by 370+ happy families across
+              Thanjavur
             </span>
           </div>
         </div>
       </div>
 
       {/* Bottom strip: features + contact */}
-      <div className="hero__strip hero__reveal" style={{ '--d': '0.6s' }}>
+      <div className="hero__strip hero__reveal" style={{ "--d": "0.6s" }}>
         <div className="container hero__strip-inner">
           <ul className="hero__features">
             {FEATURES.map((f) => (
               <li className="hero__feature" key={f.l2}>
-                <f.icon className="hero__feature-icon" size={22} aria-hidden="true" />
+                <f.icon
+                  className="hero__feature-icon"
+                  size={22}
+                  aria-hidden="true"
+                />
                 <span className="hero__feature-text">
                   {f.l1}
                   <br />
@@ -121,16 +139,29 @@ export default function Hero() {
           </ul>
 
           <div className="hero__contact">
-            <a className="hero__contact-item" href={DEALER.mapsQuery} target="_blank" rel="noopener noreferrer">
-              <MapPin className="hero__contact-icon" size={20} aria-hidden="true" />
+            <a
+              className="hero__contact-item"
+              href={DEALER.mapsQuery}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MapPin
+                className="hero__contact-icon"
+                size={20}
+                aria-hidden="true"
+              />
               <span>
-                NEXA Suriya
+                Suriya Boopathy
                 <br />
-                Thanjavur
+                NEXA · Thanjavur
               </span>
             </a>
             <a className="hero__contact-item" href={DEALER.phoneHref}>
-              <Phone className="hero__contact-icon" size={20} aria-hidden="true" />
+              <Phone
+                className="hero__contact-icon"
+                size={20}
+                aria-hidden="true"
+              />
               <span>
                 {DEALER.phoneDisplay}
                 <br />
@@ -141,5 +172,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

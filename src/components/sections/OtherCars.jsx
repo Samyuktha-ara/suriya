@@ -10,17 +10,17 @@ import grandVitaraImg from '../../assets/Grand Vitara.webp'
 import jimnyImg from '../../assets/Jimny.webp'
 import invictoImg from '../../assets/invicto.webp'
 import xl6Img from '../../assets/XL6.webp'
-import ignisImg from '../../assets/ignis.webp'
+import fronxImg from '../../assets/fronx.webp'
 import './OtherCars.css'
 
 // Real photos per model; models without a photo fall back to SVG art.
 const CAR_IMAGES = {
+  Fronx: fronxImg,
   Baleno: balenoImg,
   'Grand Vitara': grandVitaraImg,
   Jimny: jimnyImg,
   Invicto: invictoImg,
   XL6: xl6Img,
-  Ignis: ignisImg,
 }
 
 export default function OtherCars() {
@@ -31,7 +31,7 @@ export default function OtherCars() {
           eyebrow="The NEXA Range"
           title="Explore More"
           highlight="NEXA Cars in Thanjavur"
-          subtitle="Beyond the Fronx, discover the complete premium NEXA line-up at Suriya NEXA Thanjavur — every model available for a test drive today."
+          subtitle="Discover the complete premium NEXA line-up at NEXA Thanjavur — every model available for a doorstep test drive with Suriya Boopathy today."
         />
 
         <motion.ul

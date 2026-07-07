@@ -22,7 +22,7 @@ export default function FloatingButtons() {
         <a
           className="float-btn float-btn--call"
           href={DEALER.phoneHref}
-          aria-label="Call Suriya NEXA Thanjavur now"
+          aria-label="Call Suriya Boopathy at NEXA Thanjavur now"
         >
           <Phone size={22} aria-hidden="true" />
           <span className="float-btn__tip">Call Now</span>
@@ -40,7 +40,7 @@ export default function FloatingButtons() {
         <a
           className="float-btn float-btn--td"
           href="#contact"
-          aria-label="Book a Suzuki Fronx test drive"
+          aria-label="Book a NEXA doorstep test drive"
         >
           <CalendarCheck size={22} aria-hidden="true" />
           <span className="float-btn__tip">Test Drive</span>

@@ -11,9 +11,9 @@ export default function Process() {
       <div className="container">
         <SectionHeading
           eyebrow="How It Works"
-          title="Your Journey to a"
-          highlight="New Fronx"
-          subtitle="Five simple, transparent steps from your first showroom visit to a joyful delivery at Suriya NEXA Thanjavur."
+          title="Your Journey to"
+          highlight="Delivery Day"
+          subtitle="Five simple, transparent steps from your first WhatsApp message to keys in hand — coordinated end-to-end by Suriya Boopathy."
         />
 
         <motion.ol

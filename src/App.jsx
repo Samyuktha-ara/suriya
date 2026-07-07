@@ -5,6 +5,7 @@ import FloatingButtons from './components/layout/FloatingButtons'
 import './App.css'
 
 // Below-the-fold sections are code-split so the hero paints instantly.
+const OfferSlider = lazy(() => import('./components/sections/OfferSlider'))
 const WhyChoose = lazy(() => import('./components/sections/WhyChoose'))
 const FeaturedCar = lazy(() => import('./components/sections/FeaturedCar'))
 const OtherCars = lazy(() => import('./components/sections/OtherCars'))
@@ -30,9 +31,10 @@ export default function App() {
       <main id="main">
         <Hero />
         <Suspense fallback={<SectionFallback />}>
-          <WhyChoose />
+          <OfferSlider />
           <FeaturedCar />
           <OtherCars />
+          <WhyChoose />
           <WhyBuyFronx />
           <Finance />
           <Testimonials />

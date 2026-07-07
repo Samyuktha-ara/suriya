@@ -4,18 +4,18 @@ import Icon from '../ui/Icon'
 import Button from '../ui/Button'
 import { CalendarCheck } from 'lucide-react'
 import { stagger, fadeUp, viewportOnce } from '../../animations/variants'
-import { FRONX_REASONS } from '../../data/cars'
+import { EVITARA_REASONS } from '../../data/cars'
 import './WhyBuyFronx.css'
 
 export default function WhyBuyFronx() {
   return (
-    <section className="section" id="why-fronx" aria-labelledby="why-fronx-title">
+    <section className="section" id="why-evitara" aria-labelledby="why-evitara-title">
       <div className="container">
         <SectionHeading
-          eyebrow="Why Buy the Fronx"
-          title="Six Reasons the Fronx"
+          eyebrow="Why Buy the e-Vitara"
+          title="Six Reasons the e-Vitara"
           highlight="Wins in Thanjavur"
-          subtitle="Turbo performance, class-leading mileage and SUV confidence — here's why the Suzuki Fronx is the smartest premium crossover choice for Thanjavur roads."
+          subtitle="500 km of WLTP range, instant EV torque and NEXA's premium cabin — here's why the Suzuki e-Vitara is the smartest electric SUV choice for Thanjavur roads."
         />
 
         <motion.ol
@@ -25,7 +25,7 @@ export default function WhyBuyFronx() {
           whileInView="show"
           viewport={viewportOnce}
         >
-          {FRONX_REASONS.map((reason, i) => (
+          {EVITARA_REASONS.map((reason, i) => (
             <motion.li className="timeline__item" key={reason.title} variants={fadeUp}>
               <div className="timeline__marker" aria-hidden="true">
                 <Icon name={reason.icon} size={22} />
@@ -41,7 +41,7 @@ export default function WhyBuyFronx() {
 
         <div className="timeline__cta">
           <Button href="#contact" variant="primary" size="lg" icon={CalendarCheck}>
-            Book a Fronx Test Drive
+            Book an e-Vitara Test Drive
           </Button>
         </div>
       </div>

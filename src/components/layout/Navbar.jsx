@@ -35,11 +35,11 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <nav className="nav__inner container" aria-label="Primary">
-        <a href="#top" className="nav__brand" aria-label="Suriya NEXA Thanjavur — home">
+        <a href="#top" className="nav__brand" aria-label="Suriya Boopathy — Senior Relationship Manager, NEXA Thanjavur">
           <img
             className="nav__logo-img"
             src={logo}
-            alt="Suriya NEXA Thanjavur — NEXA Create. Inspire."
+            alt="Suriya Boopathy — Senior Relationship Manager, NEXA Thanjavur"
             width="640"
             height="280"
           />

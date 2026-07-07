@@ -14,16 +14,17 @@ export default function Footer() {
             <img
               className="footer__logo-img"
               src={logo}
-              alt="Suriya NEXA Thanjavur — NEXA Create. Inspire."
+              alt="Suriya Boopathy — Senior Relationship Manager, NEXA Thanjavur"
               width="640"
               height="280"
             />
-            <small>Authorized Suzuki NEXA Dealer · Thanjavur</small>
+            <small>Suriya Boopathy · Senior Relationship Manager · NEXA Thanjavur</small>
           </div>
           <p className="footer__about">
-            Suriya NEXA is the trusted Suzuki NEXA showroom in Thanjavur for the Fronx, Baleno,
-            Grand Vitara, Jimny, Invicto, XL6 and Ignis — with the best on-road price, easy finance
-            and premium after-sales support.
+            I'm Suriya Boopathy — a Senior Relationship Manager at NEXA Thanjavur with 3 years of
+            experience and 370+ happy families delivered. Book your Baleno, Fronx, Grand Vitara,
+            Jimny, Invicto or XL6 directly with me for doorstep test drives, ₹30,000 total July
+            benefit and PNB finance at 7.75%.
           </p>
           <div className="footer__social" aria-label="Social media">
             <a href={DEALER.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -90,12 +91,12 @@ export default function Footer() {
       <div className="footer__bar">
         <div className="container footer__bar-inner">
           <p>
-            © {year} Suriya NEXA Thanjavur. Authorized Maruti Suzuki NEXA Dealer. All rights
-            reserved.
+            © {year} Suriya Boopathy · Senior Relationship Manager, NEXA Thanjavur. Authorized
+            Maruti Suzuki NEXA. All rights reserved.
           </p>
           <p className="footer__disclaimer">
-            *Prices are indicative ex-showroom/starting prices and may vary. Contact the showroom
-            for the exact on-road price in Thanjavur.
+            *Prices, offers and interest rates are indicative for July 2026 and may vary. Contact
+            Suriya Boopathy for the exact on-road price in Thanjavur.
           </p>
         </div>
       </div>

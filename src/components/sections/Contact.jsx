@@ -17,18 +17,18 @@ import { NEXA_MODELS } from '../../data/cars'
 import { fadeUp, viewportOnce } from '../../animations/variants'
 import './Contact.css'
 
-const MODELS = ['Suzuki Fronx', ...NEXA_MODELS.map((c) => `Suzuki ${c.name}`)]
+const MODELS = ['Suzuki e-Vitara', ...NEXA_MODELS.map((c) => `Suzuki ${c.name}`)]
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
-  const [form, setForm] = useState({ name: '', phone: '', model: 'Suzuki Fronx', message: '' })
+  const [form, setForm] = useState({ name: '', phone: '', model: 'Suzuki e-Vitara', message: '' })
 
   const update = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const text = [
-      `Hi Suriya NEXA Thanjavur, I would like to enquire about the ${form.model}.`,
+      `Hi Suriya Boopathy, I would like to enquire about the ${form.model}.`,
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
       form.message ? `Message: ${form.message}` : '',
@@ -44,10 +44,10 @@ export default function Contact() {
     <section className="section section--tint" id="contact" aria-labelledby="contact-title">
       <div className="container">
         <SectionHeading
-          eyebrow="Visit · Call · Enquire"
-          title="Book Your Fronx Test Drive in"
-          highlight="Thanjavur"
-          subtitle="Walk into Suriya NEXA on Trichy Main Road, call us, or send an enquiry — our team will get you the best on-road price and a test drive at your convenience."
+          eyebrow="Call · WhatsApp · Enquire"
+          title="Book a Doorstep Test Drive with"
+          highlight="Suriya Boopathy"
+          subtitle="Call, WhatsApp or send an enquiry — Suriya will personally get back to you with the best on-road price, PNB finance at 7.75% and a test drive at your doorstep."
         />
 
         <div className="contact">
@@ -61,7 +61,7 @@ export default function Contact() {
           >
             <div className="contact__map glass">
               <iframe
-                title="Suriya NEXA Thanjavur location on Google Maps"
+                title="NEXA Thanjavur — Suriya Boopathy location on Google Maps"
                 src={DEALER.mapsEmbed}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -147,9 +147,9 @@ export default function Contact() {
                 <CheckCircle2 size={54} aria-hidden="true" />
                 <h3>Thank you, {form.name || 'friend'}!</h3>
                 <p>
-                  Your enquiry for the <strong>{form.model}</strong> is on its way. Our Suriya NEXA
-                  Thanjavur team will contact you shortly. You can also call us right now for instant
-                  assistance.
+                  Your enquiry for the <strong>{form.model}</strong> is on its way. Suriya Boopathy
+                  will contact you shortly from NEXA Thanjavur. You can also call directly right now
+                  for instant assistance.
                 </p>
                 <Button href={DEALER.phoneHref} variant="call" icon={Phone}>
                   Call {DEALER.phoneDisplay}
@@ -159,10 +159,10 @@ export default function Contact() {
               <>
                 <div className="contact__form-head">
                   <span className="eyebrow">
-                    <CalendarCheck size={14} aria-hidden="true" /> Free Test Drive
+                    <CalendarCheck size={14} aria-hidden="true" /> Free Doorstep Test Drive
                   </span>
                   <h3 id="contact-title">Get the Best On-Road Price</h3>
-                  <p>Fill in your details and we'll call you back within 24 hours.</p>
+                  <p>Share your details and Suriya Boopathy will personally call you back within 24 hours.</p>
                 </div>
                 <form className="contact__form" onSubmit={handleSubmit}>
                   <div className="contact__field">
@@ -218,8 +218,8 @@ export default function Contact() {
                     Send Enquiry
                   </Button>
                   <p className="contact__consent">
-                    By submitting, you agree to be contacted by Suriya NEXA Thanjavur about your
-                    enquiry.
+                    By submitting, you agree to be contacted by Suriya Boopathy (NEXA Thanjavur)
+                    about your enquiry.
                   </p>
                 </form>
               </>

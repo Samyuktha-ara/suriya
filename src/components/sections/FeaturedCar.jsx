@@ -12,8 +12,8 @@ import {
 } from 'lucide-react'
 import Button from '../ui/Button'
 import { carWaLink } from '../../data/dealer'
-import { FRONX } from '../../data/cars'
-import fronxImg from '../../assets/fronx.webp'
+import { EVITARA } from '../../data/cars'
+import evitaraImg from '../../assets/e-vitara.webp'
 import { fadeUp, viewportOnce, stagger } from '../../animations/variants'
 import './FeaturedCar.css'
 
@@ -26,45 +26,47 @@ const SPEC_TABS = [
 
 export default function FeaturedCar() {
   return (
-    <section className="section" id="fronx" aria-labelledby="fronx-title">
+    <section className="section" id="evitara" aria-labelledby="evitara-title">
       <div className="container">
         <div className="featured">
-          {/* Left: visual */}
-          <motion.div
-            className="featured__visual glass"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportOnce}
-          >
-            <span className="featured__badge">
-              <Sparkles size={14} aria-hidden="true" /> {FRONX.badge}
-            </span>
-            <div className="featured__art">
-              <img
-                src={fronxImg}
-                alt="Suzuki Fronx compact SUV available at Suriya NEXA showroom Thanjavur"
-                loading="lazy"
-                decoding="async"
-                width="1560"
-                height="1040"
-              />
-            </div>
-            <div className="featured__price">
-              <span className="featured__price-label">Starting at</span>
-              <span className="featured__price-value grad-text">{FRONX.priceFrom}</span>
-              <span className="featured__price-note">ex-showroom · Thanjavur</span>
-            </div>
+          {/* Left: visual (wrapper is sticky; motion goes on inner element so framer-motion's inline transform can't break sticky) */}
+          <div className="featured__visual-sticky">
+            <motion.div
+              className="featured__visual glass"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
+            >
+              <span className="featured__badge">
+                <Sparkles size={14} aria-hidden="true" /> {EVITARA.badge}
+              </span>
+              <div className="featured__art">
+                <img
+                  src={evitaraImg}
+                  alt="Suzuki e-Vitara premium electric SUV at NEXA Thanjavur — book with Suriya Boopathy"
+                  loading="lazy"
+                  decoding="async"
+                  width="1560"
+                  height="1040"
+                />
+              </div>
+              <div className="featured__price">
+                <span className="featured__price-label">Starting at</span>
+                <span className="featured__price-value grad-text">{EVITARA.priceFrom}</span>
+                <span className="featured__price-note">ex-showroom · Thanjavur</span>
+              </div>
 
-            <ul className="featured__quick">
-              <li>
-                <Fuel size={16} aria-hidden="true" /> {FRONX.mileage}
-              </li>
-              <li>
-                <Gauge size={16} aria-hidden="true" /> 1.0L Turbo Boosterjet
-              </li>
-            </ul>
-          </motion.div>
+              <ul className="featured__quick">
+                <li>
+                  <Fuel size={16} aria-hidden="true" /> {EVITARA.mileage}
+                </li>
+                <li>
+                  <Gauge size={16} aria-hidden="true" /> AllGrip-e Dual Motor
+                </li>
+              </ul>
+            </motion.div>
+          </div>
 
           {/* Right: details */}
           <motion.div
@@ -74,11 +76,11 @@ export default function FeaturedCar() {
             whileInView="show"
             viewport={viewportOnce}
           >
-            <span className="eyebrow">Featured · Suzuki Fronx</span>
-            <h2 className="featured__title" id="fronx-title">
-              The <span className="grad-text">Suzuki Fronx</span>
+            <span className="eyebrow">Featured · Suzuki e-Vitara</span>
+            <h2 className="featured__title" id="evitara-title">
+              The <span className="grad-text">Suzuki e-Vitara</span>
             </h2>
-            <p className="featured__tagline">{FRONX.tagline}</p>
+            <p className="featured__tagline">{EVITARA.tagline}</p>
 
             <motion.ul
               className="featured__highlights"
@@ -87,7 +89,7 @@ export default function FeaturedCar() {
               whileInView="show"
               viewport={viewportOnce}
             >
-              {FRONX.highlights.map((h) => (
+              {EVITARA.highlights.map((h) => (
                 <motion.li key={h} variants={fadeUp}>
                   <Check size={16} aria-hidden="true" /> {h}
                 </motion.li>
@@ -98,7 +100,7 @@ export default function FeaturedCar() {
             <div className="featured__variants">
               <h3 className="featured__subhead">Variants</h3>
               <div className="featured__variant-grid">
-                {FRONX.variants.map((v) => (
+                {EVITARA.variants.map((v) => (
                   <div className="featured__variant" key={v.name}>
                     <strong>{v.name}</strong>
                     <span>{v.engine}</span>
@@ -111,7 +113,7 @@ export default function FeaturedCar() {
             {/* Spec accordions */}
             <div className="featured__specs">
               {SPEC_TABS.map((tab) => {
-                const items = FRONX[tab.field]
+                const items = EVITARA[tab.field]
                 return (
                   <details className="featured__spec" key={tab.key}>
                     <summary>
@@ -133,16 +135,16 @@ export default function FeaturedCar() {
 
             <div className="featured__cta">
               <Button href="#contact" variant="primary" size="lg" icon={CalendarCheck}>
-                Book Fronx Test Drive
+                Book e-Vitara Test Drive
               </Button>
               <Button
-                href={carWaLink({ name: 'Fronx', body: 'Compact SUV', priceFrom: FRONX.priceFrom })}
+                href={carWaLink({ name: 'e-Vitara', body: 'Electric SUV', priceFrom: EVITARA.priceFrom })}
                 variant="whatsapp"
                 size="lg"
                 icon={MessageCircle}
                 external
               >
-                Get Fronx Price
+                Get e-Vitara Price
               </Button>
             </div>
           </motion.div>

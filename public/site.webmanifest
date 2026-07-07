@@ -1,21 +1,19 @@
 {
-  "name": "Suriya NEXA Thanjavur — Suzuki Fronx Showroom & Dealer",
+  "name": "Suriya Boopathy — NEXA Thanjavur",
   "short_name": "Suriya NEXA",
-  "description": "Authorized Suzuki NEXA showroom & Fronx dealer in Thanjavur. Book a test drive today.",
+  "description": "Book your NEXA car directly with Suriya Boopathy — Senior Relationship Manager, NEXA Thanjavur.",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#0a0a0f",
+  "background_color": "#ffffff",
   "theme_color": "#0a0a0f",
   "lang": "en-IN",
   "categories": ["automotive", "shopping", "business"],
   "icons": [
-    {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
