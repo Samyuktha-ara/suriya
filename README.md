@@ -59,8 +59,9 @@ Then update the absolute URLs, phone and address inside **`index.html`** (title,
 description, canonical, Open Graph, and all JSON-LD schema blocks) and in
 `public/sitemap.xml`, `public/robots.txt`, `public/site.webmanifest`.
 
-> The canonical domain used throughout is the placeholder
-> `https://www.suriyanexathanjavur.in/` — replace it with the live domain.
+> The canonical domain used throughout is `https://nexasuriya.in/`.
+> Connect it to GitHub Pages by adding a `public/CNAME` file containing
+> `nexasuriya.in` and pointing DNS at GitHub's Pages IPs.
 
 ## Optimised for Google / Meta ads
 
