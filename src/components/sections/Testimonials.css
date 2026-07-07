@@ -246,9 +246,7 @@
   align-items: center;
   justify-content: center;
   padding: clamp(1rem, 3vw, 3rem);
-  background: rgba(6, 8, 20, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(6, 8, 20, 0.96);
   cursor: zoom-out;
 }
 

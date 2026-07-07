@@ -20,7 +20,7 @@ export const carWaLink = (car) => {
       ? ` (${car.body}, from ${car.priceFrom})`
       : ''
   return waLink(
-    `Hi Suriya NEXA Thanjavur, I'm interested in the ${name}${detail}. ` +
+    `Hi Suriya Boopathy, I'm interested in the ${name}${detail}. ` +
       `Please share the on-road price in Thanjavur, current offers, finance/exchange options ` +
       `and test drive availability. Thank you!`
   )

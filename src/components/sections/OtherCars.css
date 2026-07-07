@@ -36,8 +36,7 @@
   padding: 0.3rem 0.7rem;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(10, 12, 22, 0.55);
-  backdrop-filter: blur(4px);
+  background: rgba(10, 12, 22, 0.78);
 }
 .car-card__img {
   width: 100%;
