@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, MessageCircle } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 import CarArt from '../ui/CarArt'
-import { DEALER } from '../../data/dealer'
+import { carWaLink } from '../../data/dealer'
 import { NEXA_MODELS } from '../../data/cars'
 import { stagger, scaleIn, viewportOnce } from '../../animations/variants'
 import balenoImg from '../../assets/Baleno.webp'
@@ -73,7 +73,7 @@ export default function OtherCars() {
                 <div className="car-card__actions">
                   <a
                     className="car-card__link"
-                    href={DEALER.whatsappHref}
+                    href={carWaLink(car)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -81,7 +81,7 @@ export default function OtherCars() {
                   </a>
                   <a
                     className="car-card__wa"
-                    href={DEALER.whatsappHref}
+                    href={carWaLink(car)}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Enquire about the Suzuki ${car.name} on WhatsApp`}

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import {
-  Phone,
+  MessageCircle,
   CalendarCheck,
   Fuel,
   Gauge,
@@ -11,7 +11,7 @@ import {
   Sparkles,
 } from 'lucide-react'
 import Button from '../ui/Button'
-import { DEALER } from '../../data/dealer'
+import { carWaLink } from '../../data/dealer'
 import { FRONX } from '../../data/cars'
 import fronxImg from '../../assets/fronx.webp'
 import { fadeUp, viewportOnce, stagger } from '../../animations/variants'
@@ -135,8 +135,14 @@ export default function FeaturedCar() {
               <Button href="#contact" variant="primary" size="lg" icon={CalendarCheck}>
                 Book Fronx Test Drive
               </Button>
-              <Button href={DEALER.phoneHref} variant="outline" size="lg" icon={Phone}>
-                Get On-Road Price
+              <Button
+                href={carWaLink({ name: 'Fronx', body: 'Compact SUV', priceFrom: FRONX.priceFrom })}
+                variant="whatsapp"
+                size="lg"
+                icon={MessageCircle}
+                external
+              >
+                Get Fronx Price
               </Button>
             </div>
           </motion.div>
